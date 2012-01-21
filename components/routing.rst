@@ -116,6 +116,14 @@ For example, the following route would only accept requests to /foo with
 the POST method and a secure connection::
 
    $route = new Route('/foo', array('_method' => 'post', '_scheme' => 'https' ));
+   
+.. tip::
+    
+    If you want to match all urls which start with a certain path and end in a
+    arbitrary suffix you can use the following route definition::
+        
+        $route = new Route('/start/{suffix}', array('suffix' => '.*'));
+    
 
 Using Prefixes
 ~~~~~~~~~~~~~~
